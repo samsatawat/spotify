@@ -72,8 +72,21 @@ ul.menu a:hover {
     width: 20%;
 }
 
+.sec-img {
+    position: relative;
+}
+
 .sec-img img {
     width: 100%;
+
+}
+.sec-img svg {
+    background-color: rgb(30,215,96);
+    padding: 4px;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
 }
 
 .sec-info {
@@ -98,3 +111,29 @@ ul.menu a:hover {
     padding-top: 1rem;
     border-top: 1px solid rgb(54, 54, 54);
 }
+
+.scroll-h::-webkit-scrollbar {
+    width: 0px;     
+    opacity: 0;          /* width of the entire scrollbar */
+  }
+  
+  .scroll-h::-webkit-scrollbar-track {
+    background: transparent;        /* color of the tracking area */
+  }
+  
+  .scroll-h::-webkit-scrollbar-thumb {
+    opacity: 0;
+  }
+
+  .scroll-h{
+    overflow-x: scroll;
+  }
+
+
+
+
+  /* font awesome */
+
+  .fa-arrow-right{
+      color: rgb(30,215,96);
+  }

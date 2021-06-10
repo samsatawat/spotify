@@ -7,6 +7,7 @@
     <title>Spotify</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+    <script src="https://use.fontawesome.com/281be845cd.js"></script>
 </head>
 <body>
 
@@ -33,16 +34,16 @@
                     <h3>Hello, Sam</h3>
                 </div>
                 <div class="sec-r">
-                    <a href="#"></a><i class="fa fa-arrow-left" aria-hidden="true"></i>
-                    <a href="#"></a><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    <button onclick="myFunction()">
+                        <i class="fa  fa-chevron-left" aria-hidden="true"></i>
+                    </button>
+                      <a href="#"></a><i class="fa fa-chevron-right" aria-hidden="true"></i>
                 </div>
             </div>
-                <div>
-                <div class="section-grid" id = "album-card">
-              
-            </div>
-        </div>
-            
+            <div class="scroll-h" id="album-scroll" >
+                <div class="section-grid" id = "album-card" style="width:200vw;">
+                </div>
+            </div>   
         </div>
     </section>
 
@@ -81,19 +82,29 @@
 
 </body>
 <script>
-    // var cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
-    var text = "";
-    var i;
-    for (i = 0; i < 6; i++) {
-    text += '<div class="sec-items">'+'<div class="sec-img">' +
-        '<img src="images/nirvana.jpg">'+
-        '</div>'+
-        '<div class="sec-info">'+
-        '<h3>This is Nirvana</h3>'+
-        '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, iste!</p>'+
-        '<p>123,456 Followers</p>'+
-        ' </div>'+'</div>'
+    function myFunction() {
+        document.getElementById("album-scroll").scrollTo(1000, 0);
+        console.log('worked');
 }
-document.getElementById("album-card").innerHTML =  text
+   
+    var card = "";
+    var i;
+    for (i = 0; i < 12; i++) {
+    card += 
+        '<div class="sec-items">'+
+            '<div class="sec-img">' +
+                '<img src="images/nirvana.jpg">'+
+                '<svg height="32" role="img" width="32" viewBox="0 0 24 24" aria-hidden="true"><polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="currentColor"></polygon></svg>'+
+            '</div>'+
+            '<div class="sec-info">'+
+                '<h3>This is Nirvana</h3>'+
+                '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, iste!</p>'+
+                '<p>123,456 Followers</p>'+
+            ' </div>'+
+        '</div>'
+}
+document.getElementById("album-card").innerHTML =  card
+
+
 </script>
 </html>
