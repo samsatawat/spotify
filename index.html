@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <h1>Browse</h1>
+                <ul class="menu">
+                    <li><a href="#">OVERVIEW</a></li>
+                    <li><a href="#">CHARTS</a></li>
+                    <li><a href="#">GENRE & MOODS </a></li>
+                    <li><a href="#">NEW RELEASE</a></li>
+                    <li><a href="#">DOSCOVER</a></li>
+                    <li><a href="#">PODCASTS</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <div class="sec-l">
+                    <h3>Hello, Sam</h3>
+                </div>
+                <div class="sec-r">
+                    <a href="#"></a><i class="fa fa-arrow-left" aria-hidden="true"></i>
+                    <a href="#"></a><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </div>
+            </div>
+                <div>
+                <div class="section-grid" id = "album-card">
+              
+            </div>
+        </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-items">
+                    <div class="footer-img">
+                        <h2>Charts</h2>
+                        <img scr=""alt="">
+                    </div>
+                    <p>Global and regional top charts</p>
+                </div>
+                <div class="footer-items">
+                    <div class="footer-img">
+                        <h2>Charts</h2>
+                        <img scr=""alt="">
+                    </div>
+                    <p>Global and regional top charts</p>
+                </div> <div class="footer-items">
+                    <div class="footer-img">
+                        <h2>Charts</h2>
+                        <img scr=""alt="">
+                    </div>
+                    <p>Global and regional top charts</p>
+                </div> <div class="footer-items">
+                    <div class="footer-img">
+                        <h2>Charts</h2>
+                        <img scr=""alt="">
+                    </div>
+                    <p>Global and regional top charts</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script>
+    // var cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+    var text = "";
+    var i;
+    for (i = 0; i < 6; i++) {
+    text += '<div class="sec-items">'+'<div class="sec-img">' +
+        '<img src="images/nirvana.jpg">'+
+        '</div>'+
+        '<div class="sec-info">'+
+        '<h3>This is Nirvana</h3>'+
+        '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, iste!</p>'+
+        '<p>123,456 Followers</p>'+
+        ' </div>'+'</div>'
+}
+document.getElementById("album-card").innerHTML =  text
+</script>
+</html>
