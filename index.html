@@ -34,10 +34,12 @@
                     <h3>Hello, Sam</h3>
                 </div>
                 <div class="sec-r">
-                    <button onclick="myFunction()">
+                    <button onclick="slideDir(-1)">
                         <i class="fa  fa-chevron-left" aria-hidden="true"></i>
                     </button>
-                      <a href="#"></a><i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    <button onclick="slideDir(1)">
+                      <i class="fa fa-chevron-right" aria-hidden="true"></i> 
+                    </button>
                 </div>
             </div>
             <div class="scroll-h" id="album-scroll" >
@@ -47,59 +49,55 @@
         </div>
     </section>
 
-    <footer>
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-items">
                     <div class="footer-img">
-                        <h2>Charts</h2>
-                        <img scr=""alt="">
+                        <h1>Charts</h1>
+                        <img src=".\images\systemofadown.jpg"alt="">
                     </div>
-                    <p>Global and regional top charts</p>
                 </div>
                 <div class="footer-items">
                     <div class="footer-img">
-                        <h2>Charts</h2>
-                        <img scr=""alt="">
+                        <h1>Charts</h1>
+                        <img src=".\images\systemofadown.jpg"alt="">
                     </div>
-                    <p>Global and regional top charts</p>
-                </div> <div class="footer-items">
+                </div>
+                <div class="footer-items">
                     <div class="footer-img">
-                        <h2>Charts</h2>
-                        <img scr=""alt="">
+                        <h1>Charts</h1>
+                        <img src=".\images\systemofadown.jpg"alt="">
                     </div>
-                    <p>Global and regional top charts</p>
-                </div> <div class="footer-items">
-                    <div class="footer-img">
-                        <h2>Charts</h2>
-                        <img scr=""alt="">
-                    </div>
-                    <p>Global and regional top charts</p>
                 </div>
             </div>
         </div>
-    </footer>
+
 
 </body>
 <script>
-    function myFunction() {
-        document.getElementById("album-scroll").scrollTo(1000, 0);
-        console.log('worked');
-}
+    function slideDir(x){
+        var width = document.getElementsByClassName('sec-items')[0].offsetWidth;
+       document.getElementById("album-scroll").scrollBy({
+        left: x * width,
+        behavior: 'smooth'
+        });
+    }
    
     var card = "";
     var i;
-    for (i = 0; i < 12; i++) {
+    let detail= [ 
+        {title:"This is Nirvana",subTitle:"Lorem ipsum dolor sit amet consectetur adipisicing",coverImage:"images/nirvana.jpg",follower:"123,456"}, {title:"This is ACDC",subTitle:"Lorem ipsum dolor sit amet consectetur adipisicing",coverImage:"images/nirvana.jpg",follower:"123,456"},{title:"This is Nirvana",subTitle:"Lorem ipsum dolor sit amet consectetur adipisicing",coverImage:"images/nirvana.jpg",follower:"123,456"},{title:"This is Nirvana",subTitle:"Lorem ipsum dolor sit amet consectetur adipisicing",coverImage:"images/nirvana.jpg",follower:"123,456"},{title:"This is Nirvana",subTitle:"Lorem ipsum dolor sit amet consectetur adipisicing",coverImage:"images/nirvana.jpg",follower:"123,456"},{title:"This is Nirvana",subTitle:"Lorem ipsum dolor sit amet consectetur adipisicing",coverImage:"images/nirvana.jpg",follower:"123,456"},{title:"This is Nirvana",subTitle:"Lorem ipsum dolor sit amet consectetur adipisicing",coverImage:"images/nirvana.jpg",follower:"123,456"},{title:"This is Nirvana",subTitle:"Lorem ipsum dolor sit amet consectetur adipisicing",coverImage:"images/nirvana.jpg",follower:"123,456"},{title:"This is Nirvana",subTitle:"Lorem ipsum dolor sit amet consectetur adipisicing",coverImage:"images/nirvana.jpg",follower:"123,456"},{title:"This is Nirvana",subTitle:"Lorem ipsum dolor sit amet consectetur adipisicing",coverImage:"images/nirvana.jpg",follower:"123,456"},{title:"This is Nirvana",subTitle:"Lorem ipsum dolor sit amet consectetur adipisicing",coverImage:"images/nirvana.jpg",follower:"123,456"},{title:"This is Nirvana",subTitle:"Lorem ipsum dolor sit amet consectetur adipisicing",coverImage:"images/nirvana.jpg",follower:"123,456"}]
+    for (i = 0; i < detail.length; i++) {
     card += 
         '<div class="sec-items">'+
             '<div class="sec-img">' +
-                '<img src="images/nirvana.jpg">'+
+                '<img src='+detail[i].coverImage+'>'+
                 '<svg height="32" role="img" width="32" viewBox="0 0 24 24" aria-hidden="true"><polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="currentColor"></polygon></svg>'+
             '</div>'+
             '<div class="sec-info">'+
-                '<h3>This is Nirvana</h3>'+
-                '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, iste!</p>'+
-                '<p>123,456 Followers</p>'+
+                '<h3>'+detail[i].title+'</h3>'+
+                '<p>'+detail[i].subTitle+'</p>'+
+                '<p>'+detail[i].follower+'</p>'+
             ' </div>'+
         '</div>'
 }
@@ -107,4 +105,18 @@ document.getElementById("album-card").innerHTML =  card
 
 
 </script>
+<footer>
+<div class="play-bar">
+    <div class="duration"></div>
+    <div class="bar">
+        <div class="img">
+            <img src="./images/nevermind.jpg"/>
+        </div>
+        <div class="song-info">
+                <p1>Smell Like Teen Spirit</p1>
+                <p>Nirvana</p>
+        </div>
+    </div>
+</div>
+</footer>
 </html>

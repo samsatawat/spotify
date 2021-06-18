@@ -12,7 +12,7 @@
 
 body{
     background: rgb(0,0,0);
-background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 98%, rgba(93,93,93,1) 100%);
+background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 69%, rgba(73,73,73,1) 100%);
 }
 
 .header-top {
@@ -57,7 +57,7 @@ ul.menu a:hover {
 
 .sec-r {
     color: #fff;
-    margin-left: .5rem;
+    margin-left: 1rem;
 }
 
 .section-grid {
@@ -76,10 +76,25 @@ ul.menu a:hover {
     position: relative;
 }
 
+.sec-img:hover  svg {
+    opacity: 1 ;
+    animation-name: move-up;
+    animation-duration: 300ms;
+    animation-timing-function: ease;
+
+    
+}
+
+@keyframes move-up {
+    0% {opacity: 0; bottom: -6px}
+    100% {opacity:1; bottom: 8px;}
+}
+
 .sec-img img {
     width: 100%;
 
 }
+
 .sec-img svg {
     background-color: rgb(30,215,96);
     padding: 4px;
@@ -87,6 +102,15 @@ ul.menu a:hover {
     position: absolute;
     bottom: 8px;
     right: 8px;
+    opacity: 0;
+    animation-name: move-out;
+    animation-duration: 300ms;
+    animation-timing-function: ease;
+}
+
+@keyframes move-out {
+    0% {opacity: 1; bottom: 8px}
+    100% {opacity:0; bottom: -6px;}
 }
 
 .sec-info {
@@ -129,11 +153,71 @@ ul.menu a:hover {
     overflow-x: scroll;
   }
 
+.footer {
+    margin-top: 2rem;
+    color: white;
+    text-align: center;
+}
 
+.footer-grid {
+    margin-top: 3rem;
+    margin-bottom: 8rem;
+    border-top: 1px solid rgb(54, 54, 54);
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1rem;
+}
 
+.footer-items img{
+ width: 100%;
+}
 
-  /* font awesome */
+.footer-img {
+    position: relative;
+}
 
-  .fa-arrow-right{
-      color: rgb(30,215,96);
-  }
+.footer-img img {
+    filter: opacity(50%);
+    border-radius: 8px;
+}
+
+.footer-img h1 {
+    color: white;
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+footer {
+    background: rgb(26,25,25);
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+}
+
+.duration {
+
+}
+
+.song-info {
+    display: flex;
+    align-items: center;
+}
+
+.song-info {
+    font-size: 12px;
+    font-weight: 100;
+    color: white;
+}
+.bar {
+    display: flex;
+    align-items: center;
+}
+
+.bar img {
+    width: 80px;
+    padding: 10px;
+}
